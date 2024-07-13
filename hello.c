@@ -1,10 +1,24 @@
 #include <stdio.h>
 
+void pyramid(int rows);
+
 int main(void)
 {
-    for (int i = 0; i < 3; i++)
-    {    
-             printf("Hello, world!\n");
-    }
+    int height;
+    printf("height: ");
+    scanf("%d", &height);
+    pyramid(height);
     return 0;
+}
+
+void pyramid(int rows)
+{
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j <= i; j++)
+        {
+            printf("#");
+        }
+        printf("\n");
+    }
 }
